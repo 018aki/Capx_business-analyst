@@ -1,0 +1,11 @@
+PRAW: Python Reddit API Wrapper, used for accessing the Reddit API.
+VADER Sentiment: A tool for sentiment analysis, part of the vaderSentiment library.
+NLTK: Natural Language Toolkit, used for text preprocessing (stopwords in this case).
+Scikit-learn: A library for machine learning, used for text feature extraction and topic modeling.
+re: Regular expressions module for text cleaning (included in Python’s standard library).
+Pandas: Used for data manipulation and analysis, especially for handling DataFrames.
+YFinance: Used for fetching historical stock data from Yahoo Finance.
+Random: Used for generating random numbers, particularly for creating synthetic data.
+Datetime: Used for working with dates and times, especially for defining date ranges and manipulating date objects.
+Matplotlib: Used for creating static, animated, and interactive visualizations in Python.
+Seaborn: A statistical data visualization library based on Matplotlib, used for making attractive graphs.
