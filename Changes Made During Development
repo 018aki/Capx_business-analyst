@@ -1,0 +1,40 @@
+Changes Made During Development
+Data Source Change:
+
+Initial Plan: Originally intended to use the Twitter API for sentiment analysis.
+Reason for Change: Found that the free version of the Twitter API does not allow pulling historical tweet data, which is critical for analyzing stock sentiment over time.
+Final Decision: Switched to scraping data from the Reddit stocks subreddit to gather relevant posts and discussions regarding stock market sentiment.
+Correlation with Stock Prices:
+
+Source Selection: Decided to use Yahoo Finance for obtaining historical stock prices corresponding to the timestamps of Reddit posts.
+Implementation: Integrated the Yahoo Finance API to fetch the stock prices for the same date and time as the data collected from Reddit. This enabled accurate correlation between public sentiment and actual stock performance.
+Handling Duplicates:
+
+Reason for Keeping Duplicates: Initially decided to keep duplicate entries in the dataset to ensure that all unique sentiments expressed in different discussions are preserved for analysis. Each sentiment may represent a different context or opinion that could be valuable for understanding market trends.
+Data Cleaning Process: Implemented a data cleaning process where duplicates were flagged, but not removed, allowing for a comprehensive analysis while still enabling the exploration of distinct sentiments.
+Data Filtering and Cleaning:
+
+Filtered the collected Reddit posts to exclude those older than January 1, 2021. This was necessary to focus on recent sentiments relevant to current market conditions.
+Standardized the format of stock ticker symbols to ensure consistency across the dataset, making it easier to correlate with Yahoo Finance data.
+Error Handling:
+
+Enhanced error handling during data collection to manage potential API errors from both Reddit and Yahoo Finance, ensuring that the script could continue running smoothly.
+Documentation Updates:
+
+Updated the README file multiple times to reflect changes in project scope, including the switch from Twitter to Reddit and the integration with Yahoo Finance.
+Issues Faced
+Data Source Limitations:
+
+Encountered limitations with the Twitter API that hindered access to historical tweet data, leading to the switch to Reddit as a more viable data source.
+Data Correlation Challenges:
+
+Faced challenges in synchronizing the timestamps between Reddit posts and stock prices from Yahoo Finance, necessitating careful handling of date formats and time zones.
+Duplicate Data Handling:
+
+Managing duplicates was tricky, as it required balancing between retaining unique sentiments and ensuring that the analysis remained focused and manageable.
+API Rate Limits:
+
+Both the Reddit and Yahoo Finance APIs had rate limits, which required implementing delays in requests to avoid temporary bans.
+Data Validation:
+
+Testing the correlation between Reddit sentiments and stock prices was complicated due to the dynamic nature of both datasets. Developed a validation mechanism to ensure that data integrity was maintained.
